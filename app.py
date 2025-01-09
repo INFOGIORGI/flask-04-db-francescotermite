@@ -2,8 +2,11 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+lista=(("Capocollo", "SC1", 2), ("Marmellata", "SC2", 3), ("Caffè", "SC3", 1.50))
 
-app.run()
+@app.route("/")
+def homepage():
+    return render_template("Homepage.html")
+
+@app.route("/Product")
+app.run(debug=True)
