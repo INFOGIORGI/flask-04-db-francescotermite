@@ -1,0 +1,18 @@
+{% extends "Base.html" %}
+{% block content %}
+<h1>Prodotti</h1>
+<table> 
+        <tr>
+            <th>ID Prodotti</th>
+            <th>Nome Prodotti</th>
+            <th>ID Categoria</th>
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td>{{ product[0] }}</td>
+            <td>{{ product[1] }}</td>
+            <td><a href="/category/ {{ product[2] }}>{{product[2] }}"</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

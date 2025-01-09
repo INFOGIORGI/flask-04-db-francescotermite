@@ -1,0 +1,12 @@
+{% extends "Base.html" %}
+{% extends content %}
+<h1>Dettagli Categoria</h1>
+{% if category %}
+<p><strong>ID Categoria:</strong>{{ category[[0]] }}</p>
+<p><strong>Nome Categoria:</strong>{{ category[[1]] }}</p>
+<p><strong>Descrizione:</strong>{{ category[[2]] }}</p>
+
+{% else %}
+      <p>Category not found!</p>
+{% endif %}
+{% endblock %}
